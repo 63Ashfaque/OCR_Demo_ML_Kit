@@ -9,7 +9,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn1"
+        app:layout_constraintBottom_toTopOf="@+id/btnPhoto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -17,30 +17,45 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="400dp"/>
 
             <TextView
                 android:id="@+id/tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Hello World!"
-                />
-
-
+                android:layout_margin="12dp"
+                tools:text="Hello World!" />
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
 
 
     <Button
-        android:id="@+id/btn1"
-        android:layout_width="match_parent"
+        android:id="@+id/btnPhoto"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Button 1"
+        android:text="Photo"
+        android:layout_margin="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnCopyText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnCopyText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Copy Text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_margin="12dp"
+        app:layout_constraintStart_toEndOf="@+id/btnPhoto" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
